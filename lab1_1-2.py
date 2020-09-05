@@ -14,4 +14,5 @@ def jaccard_similarity(set1: set, set2: set) -> float:
 
 
 if __name__ == '__main__':
-    pass
+    print(array_to_dict(['a', 'b', 'c', 'd', 'e']))
+    print("Метрика Жаккарда: " + str(jaccard_similarity({1, 2, 3}, {2, 4, 5})))
