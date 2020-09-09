@@ -8,11 +8,15 @@ def jaccard_similarity(set1: set, set2: set) -> float:
     for item in set1:
         if item in set2:
             intersec_size += 1
-        else:
             union_size -= 1
+
     return intersec_size / union_size
 
 
-if __name__ == '__main__':
+def main():
     print(array_to_dict(['a', 'b', 'c', 'd', 'e', 'a', 'a', 'b', 'c']))
     print("Метрика Жаккарда: " + str(jaccard_similarity({1, 2, 3}, {2, 4, 5})))
+
+
+if __name__ == '__main__':
+    main()

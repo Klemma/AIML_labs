@@ -8,7 +8,7 @@ def get_json_from_pastebin(url: str) -> list:
 
 def json_to_csv(json_data: list) -> None:
     sales_csv = open("sales.csv", "w")
-    csv_writer = csv.writer(sales_csv, delimiter=" ")
+    csv_writer = csv.writer(sales_csv, delimiter=",")
 
     headers = ["item", "country", "year", "sales"]
     csv_writer.writerow(headers)
@@ -30,6 +30,14 @@ def json_to_csv(json_data: list) -> None:
     sales_csv.close()
 
 
-if __name__ == '__main__':
+def main():
     json_data = get_json_from_pastebin("https://pastebin.com/raw/edzB88Px")
     json_to_csv(json_data)
+    with open("sales.csv") as f:
+        csv_reader = csv.reader(f)
+        for row in csv_reader:
+            print(row if row != [] else '\n', end='')
+
+
+if __name__ == '__main__':
+    main()
