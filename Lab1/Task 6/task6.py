@@ -64,7 +64,7 @@ def main():
     for length, proportion in proportions.items():
         print(f"{length}: {proportion}")
 
-    print(f"\nСумма полученных пропорций: {sum(proportions)}")
+    print(f"\nСумма полученных пропорций: {sum(proportions.values())}")
 
 
 if __name__ == '__main__':
