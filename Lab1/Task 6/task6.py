@@ -50,7 +50,7 @@ def get_users_proportions(txt: str) -> dict:
 
 
 def main():
-    txt = get_txt_from_url("https://raw.githubusercontent.com/Klemma/AIML_labs/master/arcs_refined.txt")
+    txt = get_txt_from_url("https://raw.githubusercontent.com/Klemma/AIML_labs/master/Lab1/Task%206/arcs_refined.txt")
     users = get_users_set(txt)
     print(f"Количество уникальных пользователей равно {len(users)}")
 

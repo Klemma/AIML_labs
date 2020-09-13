@@ -2,7 +2,7 @@ import requests
 import csv
 
 
-def get_json_from_pastebin(url: str) -> list:
+def get_json_from_url(url: str) -> list:
     return requests.get(url).json()
 
 
@@ -31,7 +31,7 @@ def json_to_csv(json_data: list) -> None:
 
 
 def main():
-    json_data = get_json_from_pastebin("https://pastebin.com/raw/edzB88Px")
+    json_data = get_json_from_url("https://pastebin.com/raw/edzB88Px")
     json_to_csv(json_data)
     with open("sales.csv") as f:
         csv_reader = csv.reader(f)
