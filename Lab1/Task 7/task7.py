@@ -83,6 +83,10 @@ def main():
         if diff >= 50:
             print(comb, ': ', diff, sep='')
 
+    # with open("test.txt", "r", encoding="utf-8") as f:
+    #     text = f.read()
+    # sims = determine_text_language(text, similar_combs, ru_merged_combs, bg_merged_combs)
+    # print(sims)
     filenames = ("test_BG_1.txt", "test_RU_1.txt", "test_BG_2.txt", "test_RU_2.txt")
     print()
     for filename in filenames:
